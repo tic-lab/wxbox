@@ -256,7 +256,7 @@
                 $(".check-result").html("");
                 var ticket = sha1(domain);
                 $.ajax({
-                    url: "http://39.109.17.21:803/check",
+                    url: "https://api.wxbox.tk/check",   //http://39.109.17.21:803/check
                     type: 'post',
                     data: { url: domain, ticket: ticket },
                     success: function (data) {
