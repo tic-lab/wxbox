@@ -256,13 +256,10 @@
                 $(".check-result").html("");
                 var ticket = sha1(domain);
                 $.ajax({
-                    //url: "http://39.109.17.21:803/check",
-                    url: "http://localhost:59737/check",
+                    url: "http://39.109.17.21:803/check",
                     type: 'post',
                     data: { url: domain, ticket: ticket },
                     success: function (data) {
-                        console.log(data);
-
                         var strRes = data.Msg;
                         var color = "darkorchid";
                         if (data.Code == 102 || data.Code == 103) {
